@@ -1,0 +1,1153 @@
+{
+    "meta": {
+        "__export_time": 1628429789535,
+        "__export_app": "firecamp_v2.0.11 ",
+        "__export_version": 1
+    },
+    "project": {
+        "name": "Node Ecommerce",
+        "description": ""
+    },
+    "modules": [
+        {
+            "name": "User Management",
+            "description": "",
+            "requests": [
+                {
+                    "meta": {
+                        "name": "Register",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/users/register",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/users/register",
+                        "query_params": []
+                    },
+                    "method": "POST",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text",
+                            "disable": false
+                        }
+                    ],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Mg Mg",
+                            "body": {
+                                "application/json": {
+                                    "value": "{\r\n    \"name\":\"Mg Mg\",\r\n    \"email\":\"mgmg@gmail.com\",\r\n    \"phone\":\"09200200200\",\r\n    \"password\":\"123123\"\r\n}",
+                                    "headers": []
+                                }
+                            },
+                            "meta": {
+                                "is_default": false,
+                                "active_body_type": "application/json"
+                            }
+                        },
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "application/json",
+                                "is_default": true
+                            },
+                            "body": {
+                                "application/json": {
+                                    "value": "{\r\n    \"name\":\"Owner\",\r\n    \"email\":\"owner@gmail.com\",\r\n    \"phone\":\"09100100100\",\r\n    \"password\":\"123123\"\r\n}",
+                                    "headers": []
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "Login",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/users",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/users",
+                        "query_params": []
+                    },
+                    "method": "POST",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text",
+                            "disable": false
+                        }
+                    ],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "application/json",
+                                "is_default": true
+                            },
+                            "body": {
+                                "application/json": {
+                                    "value": "{\r\n    \"phone\":\"09200200200\",\r\n    \"password\":\"123123\"\r\n}",
+                                    "headers": []
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "User Add Role",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/users/add/role",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/users/add/role",
+                        "query_params": []
+                    },
+                    "method": "POST",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text",
+                            "disable": false
+                        }
+                    ],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "application/json",
+                                "is_default": true
+                            },
+                            "body": {
+                                "application/json": {
+                                    "value": "{\r\n    \"userId\":\"610fd6c6ed74d124dc59cad3\",\r\n    \"roleId\":\"610fdab973140e3f844f4cbf\"\r\n}",
+                                    "headers": []
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "User Remove Role",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/users/remove/role",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/users/remove/role",
+                        "query_params": []
+                    },
+                    "method": "POST",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text",
+                            "disable": false
+                        }
+                    ],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "application/json",
+                                "is_default": true
+                            },
+                            "body": {
+                                "application/json": {
+                                    "value": "{\r\n    \"userId\":\"610fd6c6ed74d124dc59cad3\",\r\n    \"roleId\":\"610fdab973140e3f844f4cbf\"\r\n}",
+                                    "headers": []
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "User Add Permit",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/users/add/permit",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/users/add/permit",
+                        "query_params": []
+                    },
+                    "method": "POST",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text",
+                            "disable": false
+                        }
+                    ],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "application/json",
+                                "is_default": true
+                            },
+                            "body": {
+                                "application/json": {
+                                    "value": "{\r\n    \"userId\":\"610fd6c6ed74d124dc59cad3\",\r\n    \"permitId\":\"610fdbac15891e1560735530\"\r\n}",
+                                    "headers": []
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "User Remove Permit",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/users/remove/permit",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/users/remove/permit",
+                        "query_params": []
+                    },
+                    "method": "POST",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text",
+                            "disable": false
+                        }
+                    ],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "application/json",
+                                "is_default": true
+                            },
+                            "body": {
+                                "application/json": {
+                                    "value": "{\r\n    \"userId\":\"610fd6c6ed74d124dc59cad3\",\r\n    \"permitId\":\"610fdbac15891e1560735530\"\r\n}",
+                                    "headers": []
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "Get User",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/users/610fd6c6ed74d124dc59cad3",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/users/610fd6c6ed74d124dc59cad3",
+                        "query_params": []
+                    },
+                    "method": "GET",
+                    "headers": [],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "noBody",
+                                "is_default": true
+                            },
+                            "body": {}
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Role Management",
+            "description": "",
+            "requests": [
+                {
+                    "meta": {
+                        "name": "Add",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/roles",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/roles",
+                        "query_params": []
+                    },
+                    "method": "POST",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text",
+                            "disable": false
+                        }
+                    ],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "application/json",
+                                "is_default": true
+                            },
+                            "body": {
+                                "application/json": {
+                                    "value": "{\r\n    \"name\":\"Owner\"\r\n}",
+                                    "headers": []
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "All",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/roles",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/roles",
+                        "query_params": []
+                    },
+                    "method": "GET",
+                    "headers": [],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "noBody",
+                                "is_default": true
+                            },
+                            "body": {}
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "Single Role",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/roles/610e8aec8a3da33a5cc7be35",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/roles/610e8aec8a3da33a5cc7be35",
+                        "query_params": []
+                    },
+                    "method": "GET",
+                    "headers": [],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "noBody",
+                                "is_default": true
+                            },
+                            "body": {}
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "Delete",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/roles/610e8aec8a3da33a5cc7be35",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/roles/610e8aec8a3da33a5cc7be35",
+                        "query_params": []
+                    },
+                    "method": "DELETE",
+                    "headers": [],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "noBody",
+                                "is_default": true
+                            },
+                            "body": {}
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "Patch",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/roles/610e8b3f8a3da33a5cc7be3d",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/roles/610e8b3f8a3da33a5cc7be3d",
+                        "query_params": []
+                    },
+                    "method": "PATCH",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text",
+                            "disable": false
+                        }
+                    ],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "application/json",
+                                "is_default": true
+                            },
+                            "body": {
+                                "application/json": {
+                                    "value": "{\r\n    \"name\":\"Manager\"\r\n}",
+                                    "headers": []
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "Role Add Permit",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/roles/add/permit",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/roles/add/permit",
+                        "query_params": []
+                    },
+                    "method": "POST",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text",
+                            "disable": false
+                        }
+                    ],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "application/json",
+                                "is_default": true
+                            },
+                            "body": {
+                                "application/json": {
+                                    "value": "{\r\n    \"roleId\":\"610e8b3f8a3da33a5cc7be3d\",\r\n    \"permitId\":\"610fd08d378eb70fd8dce3cc\"\r\n}",
+                                    "headers": []
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "Role Remove Permit",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/roles/remove/permit",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/roles/remove/permit",
+                        "query_params": []
+                    },
+                    "method": "POST",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text",
+                            "disable": false
+                        }
+                    ],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "application/json",
+                                "is_default": true
+                            },
+                            "body": {
+                                "application/json": {
+                                    "value": "{\r\n    \"roleId\":\"610e8b3f8a3da33a5cc7be3d\",\r\n    \"permitId\":\"610fd07e378eb70fd8dce3c8\"\r\n}",
+                                    "headers": []
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Permit Management",
+            "description": "",
+            "requests": [
+                {
+                    "meta": {
+                        "name": "Add",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/permits",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/permits",
+                        "query_params": []
+                    },
+                    "method": "POST",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text",
+                            "disable": false
+                        }
+                    ],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "application/json",
+                                "is_default": true
+                            },
+                            "body": {
+                                "application/json": {
+                                    "value": "{\r\n    \"name\":\"Delete  Post\"\r\n}",
+                                    "headers": []
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "All",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/permits",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/permits",
+                        "query_params": []
+                    },
+                    "method": "GET",
+                    "headers": [],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "noBody",
+                                "is_default": true
+                            },
+                            "body": {}
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "Delete",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/permits/610e8c38b8607b22f0929614",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/permits/610e8c38b8607b22f0929614",
+                        "query_params": []
+                    },
+                    "method": "DELETE",
+                    "headers": [],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "noBody",
+                                "is_default": true
+                            },
+                            "body": {}
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "Patch",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/permits/610e8c18f012943bec55ba90",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/permits/610e8c18f012943bec55ba90",
+                        "query_params": []
+                    },
+                    "method": "PATCH",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text",
+                            "disable": false
+                        }
+                    ],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "application/json",
+                                "is_default": true
+                            },
+                            "body": {
+                                "application/json": {
+                                    "value": "    {\r\n      \"name\": \"Create Post\"\r\n    }",
+                                    "headers": []
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "Single Permit",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/permits/610e8c18f012943bec55ba90",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/permits/610e8c18f012943bec55ba90",
+                        "query_params": []
+                    },
+                    "method": "GET",
+                    "headers": [],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "noBody",
+                                "is_default": true
+                            },
+                            "body": {}
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "requests": [],
+    "environments": [
+        {
+            "name": "Production",
+            "variables": {
+                "variable_name": "variable_value"
+            }
+        },
+        {
+            "name": "Development",
+            "variables": {
+                "variable_name": "variable_value"
+            }
+        }
+    ]
+}
