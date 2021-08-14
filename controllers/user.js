@@ -111,6 +111,31 @@ let drop = async (req, res) => {
     let result = await TB.findByIdAndDelete(req.params.id);
     res.send({ con: true, 'msg': "Single User!", result });
 }
+let hasRole = async (userId, checkRoleId) => {
+    let user = await TB.findByIdAndUpdate(userId).populate('roles');
+    let foundRole = user.roles.find((role) => role._id == checkRoleId);
+    if (foundRole) return true;
+    return false;
+}
+
+
+let hasPermit = async (userId,permitId) => {
+    let user = await TB.findByIdAndUpdate(userId).populate('permits');
+    let foundPermit = user.permits.find((permit) => permit._id == permitId);
+    if (foundPermit) {
+        return true;
+    } else {
+        let roleUser = await TB.findByIdAndUpdate(userId).populate('roles');
+        let permits = [];
+        roleUser.roles.map((role) => role.permits.forEach((permit) => permits.push(permit._id)));
+        let foundPermit = permits.filter((permit) => permit == permitId);
+        if (foundPermit.length > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
 
 module.exports = {
     register,
@@ -123,4 +148,6 @@ module.exports = {
     get,
     patch,
     drop,
+    hasRole,
+    hasPermit
 }
