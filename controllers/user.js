@@ -68,6 +68,7 @@ let removeRole = async (req, res) => {
         res.send({ con: true, 'msg': "Role Addes!", result });
     }
 }
+
 let addPermit = async (req, res) => {
     let user = await TB.findById(req.body.userId);
     let permits = user.permits;
@@ -107,17 +108,18 @@ let patch = async (req, res) => {
     let result = await TB.findById(req.params.id);
     res.send({ con: true, 'msg': "Single User!", result });
 }
+
 let drop = async (req, res) => {
     let result = await TB.findByIdAndDelete(req.params.id);
     res.send({ con: true, 'msg': "Single User!", result });
 }
+
 let hasRole = async (userId, checkRoleId) => {
     let user = await TB.findByIdAndUpdate(userId).populate('roles');
     let foundRole = user.roles.find((role) => role._id == checkRoleId);
     if (foundRole) return true;
     return false;
 }
-
 
 let hasPermit = async (userId,permitId) => {
     let user = await TB.findByIdAndUpdate(userId).populate('permits');

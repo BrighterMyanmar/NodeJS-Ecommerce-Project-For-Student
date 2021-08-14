@@ -9,7 +9,11 @@ router.post('/add/role',controller.addRole);
 router.post('/remove/role',controller.removeRole);
 router.post('/add/permit',controller.addPermit);
 router.post('/remove/permit',controller.removePermit);
-router.get('/checkPermit',controller.hasPermit);
+router.get('/checkPermit/:userId/:permitId',async (req,res) => {
+    let con = await controller.hasPermit(req.params.userId,req.params.permitId);
+    if(con) console.log("User has that permission");
+    else console.log("User has not that permission");
+});
 
 router.route('/:id')
     .get(controller.get)
