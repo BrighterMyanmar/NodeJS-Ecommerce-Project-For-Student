@@ -1,19 +1,16 @@
 const router = require('express-promise-router')();
 const controller = require('../controllers/user');
+const {UserSchema} = require('../utils/schema');
+const {validateBody} = require('../utils/validator');
 
 
-router.post('/',controller.login);
-router.post('/register',controller.register);
+router.post('/',[validateBody(UserSchema.login),controller.login]);
+router.post('/register',[validateBody(UserSchema.register),controller.register]);
 router.get('/',controller.all);
 router.post('/add/role',controller.addRole);
 router.post('/remove/role',controller.removeRole);
 router.post('/add/permit',controller.addPermit);
 router.post('/remove/permit',controller.removePermit);
-router.get('/checkPermit/:userId/:permitId',async (req,res) => {
-    let con = await controller.hasPermit(req.params.userId,req.params.permitId);
-    if(con) console.log("User has that permission");
-    else console.log("User has not that permission");
-});
 
 router.route('/:id')
     .get(controller.get)
