@@ -3,10 +3,10 @@ const TB = require('../models/product');
 let add = async (req, res) => {
     let data = new TB(req.body);
     let result = await data.save();
-    res.send({ con: true, 'msg': "Product Saved!", result });
+    res.send({ con: true, 'msg': "Product Saved!", result:req.body });
 }
 let all = async (req, res) => {
-    let result = await TB.find();
+    let result = await TB.find().populate('catid').populate('subcatid').populate('childcatid');
     res.send({ con: true, 'msg': "All Products!", result });
 }
 let get = async (req, res) => {

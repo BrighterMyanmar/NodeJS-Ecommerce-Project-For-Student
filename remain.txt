@@ -1,0 +1,16 @@
+1-> Request Validation 
+3-> Chatting
+4-> Api Export
+5-> Route Export add Middleware -> Owner 
+6-> Migration / Backup 
+7-> Publish
+
+Today 
+Prodct
+User has Permission/Role using Name 
+
+Api
+Register (Post)
+Login  (Post)
+Get Data , Cat, Order Histy
+Order Upload (Post )

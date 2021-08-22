@@ -5,9 +5,7 @@ const Redis = require('./redis');
 let verifyToken = async req => {
     let token = req.headers.authorization.split(" ")[1];
     let decode = jwt.verify(token,process.env.SECRET_KEY);
-    let redisUser = await Redis.getObj(decode.id);
-    if(redisUser) return true;
-    else return false;
+    return await Redis.getObj(decode.id);
 }
 
 module.exports = {

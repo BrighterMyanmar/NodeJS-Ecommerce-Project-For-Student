@@ -1,20 +1,21 @@
 const router = require('express-promise-router')();
 const controller = require('../controllers/user');
-const {UserSchema} = require('../utils/schema');
-const {validateBody} = require('../utils/validator');
+const {UserSchema,AllSchema} = require('../utils/schema');
+const {validateBody,validateParam} = require('../utils/validator');
 
 
 router.post('/',[validateBody(UserSchema.login),controller.login]);
 router.post('/register',[validateBody(UserSchema.register),controller.register]);
 router.get('/',controller.all);
-router.post('/add/role',controller.addRole);
-router.post('/remove/role',controller.removeRole);
-router.post('/add/permit',controller.addPermit);
-router.post('/remove/permit',controller.removePermit);
+
+router.post('/add/role',[validateBody(UserSchema.addRole),controller.addRole]);
+router.post('/remove/role',[validateBody(UserSchema.addRole),controller.removeRole]);
+router.post('/add/permit',[validateBody(UserSchema.addPermit),controller.addPermit]);
+router.post('/remove/permit',[validateBody(UserSchema.addPermit),controller.removePermit]);
 
 router.route('/:id')
-    .get(controller.get)
-    .patch(controller.patch)
-    .delete(controller.drop)
+    .get([validateParam(AllSchema.id,'id'),controller.get])
+    .patch([validateParam(AllSchema.id,'id'),controller.patch])
+    .delete([validateParam(AllSchema.id,'id'),controller.drop])
 
 module.exports = router;

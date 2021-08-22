@@ -17,9 +17,17 @@ app.use(fileUpload());
 const userRouter = require('./routes/user')
 const roleRouter = require('./routes/role');
 const permitRouter = require('./routes/permit');
+const categoryRouter = require('./routes/category');
+const subcatRouter = require('./routes/subcat');
+const childcatRouter = require('./routes/childcat');
+const productRouter = require('./routes/products');
 
 app.use('/users', userRouter);
 app.use('/roles', roleRouter);
 app.use('/permits', permitRouter);
+app.use('/cats', categoryRouter);
+app.use('/subcats', subcatRouter);
+app.use('/childcats', childcatRouter);
+app.use('/products', productRouter);
 
 app.listen(process.env.PORT, console.log(`Server is running at port ${process.env.PORT}`))

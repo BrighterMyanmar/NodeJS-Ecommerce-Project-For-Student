@@ -1,6 +1,8 @@
 const TB = require('../models/user');
 const Helper = require('../utils/helper');
 const Redis = require('../utils/redis');
+const RoleTB = require('../models/role');
+const PermitTB = require('../models/permit');
 
 let register = async (req, res) => {
     let emailUser = await TB.findOne({ email: req.body.email });
@@ -114,6 +116,11 @@ let drop = async (req, res) => {
     res.send({ con: true, 'msg': "Single User!", result });
 }
 
+let hasRoleByName = async (userId,roleName) => {
+    let role = await RoleTB.findOne({name:roleName});
+    if(role) return await hasRole(userId,role._id);
+    else return false;
+}
 let hasRole = async (userId, checkRoleId) => {
     let user = await TB.findByIdAndUpdate(userId).populate('roles');
     let foundRole = user.roles.find((role) => role._id == checkRoleId);
@@ -121,6 +128,12 @@ let hasRole = async (userId, checkRoleId) => {
     return false;
 }
 
+let hasPermitByName = async (userId,permitName) => {
+    let permit = await PermitTB.findOne({name:permitName});
+    if(permit) return await hasPermit(userId,permit._id);
+    else return false;
+   
+}
 let hasPermit = async (userId,permitId) => {
     let user = await TB.findByIdAndUpdate(userId).populate('permits');
     let foundPermit = user.permits.find((permit) => permit._id == permitId);
@@ -151,5 +164,7 @@ module.exports = {
     patch,
     drop,
     hasRole,
-    hasPermit
+    hasPermit,
+    hasRoleByName,
+    hasPermitByName
 }
