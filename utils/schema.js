@@ -13,11 +13,11 @@ module.exports = {
             password: Joi.string().min(8).max(30).required()
         }),
         "addRole":Joi.object({
-            userId: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required()
+            userId: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required(),
             roleId: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required()
         }),
         "addPermit":Joi.object({
-            userId: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required()
+            userId: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required(),
             permitId: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required()
         })
     },
@@ -26,10 +26,10 @@ module.exports = {
             name: Joi.string().required(),
         }),
         "addPermit": Joi.object({
-            roleId: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required()
+            roleId: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required(),
             permitId: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required()
         })
-    }
+    },
     "CategorySchema": {
         "create": Joi.object({
             name: Joi.string().required()
@@ -50,16 +50,19 @@ module.exports = {
     "ProductSchema": {
         "create": Joi.object({
             name: Joi.string().required(),
-            price: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required()
-            brand: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required()
-            catid: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required()
-            subcatid: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required()
+            price: Joi.number().required(),
+            brand: Joi.string().required(),
+            catid: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required(),
+            subcatid: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required(),
             childcatid: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required()
         })
     },
     "AllSchema": {
         id: Joi.object({
             "id": Joi.string().regex(/^[0-9a-fA-F]{24}$/).required()
+        }),
+        page: Joi.object({
+            "page": Joi.string().required()
         })
     }
 }

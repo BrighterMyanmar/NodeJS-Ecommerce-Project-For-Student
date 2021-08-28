@@ -9,7 +9,8 @@ router.get('/', controller.all)
 
 router.route('/:id')
     .get([validateParam(AllSchema.id,'id'), controller.get])
-    .patch([validateParam(AllSchema.id,'id'),controller.patch)
+    .patch([validateParam(AllSchema.id,'id'),controller.patch])
     .delete([validateParam(AllSchema.id,'id'),controller.drop])
 
 module.exports = router;
+

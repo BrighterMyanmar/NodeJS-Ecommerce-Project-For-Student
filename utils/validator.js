@@ -22,14 +22,24 @@ module.exports = {
             }
         }
     },
+    validatePage: (schema, name) => {
+        return (req, res, next) => {
+            let result = schema.validate({ page: req['params'][name] });
+            if (result.error) {
+                res.send({ con: false, 'msg': result.error.details[0].message })
+            } else {
+                next()
+            }
+        }
+    },
     validateToken: () => {
         return async (req, res, next) => {
-            if (!req.headers.authorization) {
-                res.send({ msg: "No Beara Token" })
-            } else {
+            if (!req.headers.authorization) throw new Error("No Beara Token");
+            else {
                 let redisUser = await Helper.verifyToken(req);
+                req.body["user"] = redisUser;
                 if (redisUser) next();
-                else res.send({ msg: "Tokenization Error!" });
+                else throw new Error("Tokenization Error!")
             }
         }
     },
@@ -39,8 +49,8 @@ module.exports = {
             if (redisUser) {
                 let bol = await UserController.hasRoleByName(redisUser._id, roleName);
                 if (bol) next()
-                else res.send({ msg: "Validation Error!" });
-            } else res.send({ msg: "Tokenization Error!" });
+                throw new Error("Validation Error!");
+            } throw new Error("Tokenization Error!")
         }
     },
     validatePermit: permitName => {
@@ -49,8 +59,8 @@ module.exports = {
             if (redisUser) {
                 let bol = await UserController.hasPermitByName(redisUser._id, permitName);
                 if (bol) next()
-                else res.send({ msg: "Validation Error!" });
-            } else res.send({ msg: "Tokenization Error!" });
+                throw new Error("Validation Error!" );
+            } throw new Error("Tokenization Error!")
         }
     }
 

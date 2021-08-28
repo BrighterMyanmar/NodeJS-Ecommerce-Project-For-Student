@@ -21,6 +21,8 @@ const categoryRouter = require('./routes/category');
 const subcatRouter = require('./routes/subcat');
 const childcatRouter = require('./routes/childcat');
 const productRouter = require('./routes/products');
+const orderRouter = require('./routes/order');
+const apiRouter = require('./routes/api')
 
 app.use('/users', userRouter);
 app.use('/roles', roleRouter);
@@ -29,5 +31,16 @@ app.use('/cats', categoryRouter);
 app.use('/subcats', subcatRouter);
 app.use('/childcats', childcatRouter);
 app.use('/products', productRouter);
+app.use('/orders', orderRouter);
+app.use('/api',apiRouter);
+
+
+
+app.use((err,req,res,next)=>{
+   err.status = err.status || 303;
+   res.status(err.status).json({con:false,"msg":err.message});
+})
+
+
 
 app.listen(process.env.PORT, console.log(`Server is running at port ${process.env.PORT}`))

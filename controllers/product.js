@@ -22,6 +22,13 @@ let drop = async (req, res) => {
     let result = await TB.findByIdAndDelete(req.params.id);
     res.send({ con: true, 'msg': "Single Product!", result });
 }
+let paginate = async(req,res) => {
+   let page = req.params.page;
+   let skipCount = Number(page)  == 1 ? 0 : (Number(page) - 1) * process.env.Limit;
+   let result = await TB.find().skip(skipCount).limit(Number(process.env.Limit));
+   res.send({ con: true, 'msg': "Single Product!", result});
+ 
+}
 
 module.exports = {
     add,
@@ -29,4 +36,5 @@ module.exports = {
     get,
     patch,
     drop,
+    paginate
 }
