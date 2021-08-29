@@ -1,0 +1,56 @@
+[
+   {
+      "roles": [
+         "6117bc6d2d827a3b60a142b8",
+         "610fdab973140e3f844f4cbf",
+         "6117bc722d827a3b60a142bb"
+      ],
+      "permits": [
+         "610fdbac15891e1560735530"
+      ],
+      "_id": "610fd68647b7a33ec0ea5d10",
+      "name": "Owner",
+      "email": "owner@gmail.com",
+      "phone": "09100100100",
+      "password": "$2b$10$a/fCaUEtPB1AnixmhNnZSOtFJhug0IVqnGrnTBbzqSJBZGcVK/GT2",
+      "created": "2021-08-08T13:05:10.709Z",
+      "__v": 0
+   },
+   {
+      "roles": [
+         "610fdab973140e3f844f4cbf"
+      ],
+      "permits": [
+         "610fdbac15891e1560735530"
+      ],
+      "_id": "610fd6c6ed74d124dc59cad3",
+      "name": "Mg Mg",
+      "email": "mgmg@gmail.com",
+      "phone": "09200200200",
+      "password": "$2b$10$lS5F82c5CddcBQsKWJMKCOeW.2CRS.PNGWhCdZcHrEiruMKol7QnC",
+      "created": "2021-08-08T13:06:14.854Z",
+      "__v": 0
+   },
+   {
+      "roles": [],
+      "permits": [],
+      "_id": "611911d50fe48b23ec756684",
+      "name": "Su Su",
+      "email": "susu@gmail.com",
+      "phone": "09300300300",
+      "password": "$2b$10$pLttP8549SYvsAzV9yXVYuSxmSavt82A0fK3nyOJjFoZcLJ69gWHa",
+      "created": "2021-08-15T13:08:37.325Z",
+      "__v": 0
+   },
+   {
+      "roles": [],
+      "permits": [],
+      "_id": "612a433a156ba54024ac9251",
+      "name": "User1",
+      "email": "user1@gmail.com",
+      "phone": "06300300300",
+      "password": "$2b$10$nRvBUdYXA77zaGHTRDG25uJAw1TFYmWpS5yHbI7Z20pgxnSSHAPjq",
+      "created": "2021-08-28T14:07:54.940Z",
+      "__v": 0
+   }
+]

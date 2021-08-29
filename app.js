@@ -22,7 +22,8 @@ const subcatRouter = require('./routes/subcat');
 const childcatRouter = require('./routes/childcat');
 const productRouter = require('./routes/products');
 const orderRouter = require('./routes/order');
-const apiRouter = require('./routes/api')
+const apiRouter = require('./routes/api');
+
 
 app.use('/users', userRouter);
 app.use('/roles', roleRouter);
@@ -41,6 +42,13 @@ app.use((err,req,res,next)=>{
    res.status(err.status).json({con:false,"msg":err.message});
 })
 
+/********* Migrations  **********/
+let migrate = () => {
+   let migrator = require("./migrations/migrate");
+   // migrator.backup();
+   // migrator.migrate();
+}
+// migrate()
 
 
 app.listen(process.env.PORT, console.log(`Server is running at port ${process.env.PORT}`))
