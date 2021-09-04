@@ -1,14 +1,20 @@
 require('dotenv').config()
 const express = require('express'),
-    app = express(),
-    bodyParser = require('body-parser'),
-    mongoose = require('mongoose'),
-    fileUpload = require('express-fileupload');
+   app = express(),
+   server = require('http').createServer(app),
+   { Server } = require('socket.io'),
+   io = new Server(server, {
+      origin: "*"
+   }),
+   bodyParser = require('body-parser'),
+   mongoose = require('mongoose'),
+   helper = require('./utils/helper'),
+   fileUpload = require('express-fileupload');
 
 mongoose.connect(`mongodb://localhost:27017/${process.env.DB_NAME}`, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
+   useNewUrlParser: true,
+   useUnifiedTopology: true,
+   useFindAndModify: false
 });
 
 app.use(bodyParser.json());
@@ -33,14 +39,28 @@ app.use('/subcats', subcatRouter);
 app.use('/childcats', childcatRouter);
 app.use('/products', productRouter);
 app.use('/orders', orderRouter);
-app.use('/api',apiRouter);
+app.use('/api', apiRouter);
 
-
-
-app.use((err,req,res,next)=>{
+app.use((err, req, res, next) => {
    err.status = err.status || 303;
-   res.status(err.status).json({con:false,"msg":err.message});
+   res.status(err.status).json({ con: false, "msg": err.message });
 })
+
+
+io.of("/chat").use(async (socket, next) => {
+   let user = await helper.getTokenFromSocket(socket);
+   if (user == 'blank') {
+      next(new Error('Authentication Error By Tester'));
+   } else {
+      socket.userData = user;
+      next()
+   }
+}).on("connection", (socket) => {
+   require('./utils/chat').initialize(io, socket);
+})
+
+server.listen(process.env.PORT, console.log(`Server is running at port ${process.env.PORT}`))
+
 
 /********* Migrations  **********/
 let migrate = () => {
@@ -49,6 +69,3 @@ let migrate = () => {
    // migrator.migrate();
 }
 // migrate()
-
-
-app.listen(process.env.PORT, console.log(`Server is running at port ${process.env.PORT}`))
