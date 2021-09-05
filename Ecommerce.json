@@ -1,7 +1,7 @@
 {
     "meta": {
-        "__export_time": 1630161504058,
-        "__export_app": "firecamp_v2.0.11 ",
+        "__export_time": 1630843590140,
+        "__export_app": "firecamp_v2.1.0 ",
         "__export_version": 1
     },
     "project": {
@@ -64,7 +64,7 @@
                             "name": "Mg Mg",
                             "body": {
                                 "application/json": {
-                                    "value": "{\r\n    \"name\":\"Su Su\",\r\n    \"email\":\"susu@gmail.com\",\r\n    \"phone\":\"09300300300\",\r\n    \"password\":\"123123123\"\r\n}",
+                                    "value": "{\r\n    \"name\":\"Su Su\",\r\n    \"email\":\"owner@gmail.com\",\r\n    \"phone\":\"09300300300\",\r\n    \"password\":\"123123123\"\r\n}",
                                     "headers": []
                                 }
                             },
@@ -445,6 +445,68 @@
                                 "is_default": true
                             },
                             "body": {}
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "User 1 Login",
+                        "description": "",
+                        "active_auth": "no_auth",
+                        "type": "api",
+                        "version": "1.0"
+                    },
+                    "url": {
+                        "slashes": false,
+                        "protocol": "",
+                        "hash": "",
+                        "pathname": "127.0.0.1:3000/users",
+                        "auth": "",
+                        "host": "",
+                        "port": "",
+                        "hostname": "",
+                        "password": "",
+                        "username": "",
+                        "origin": "null",
+                        "href": "127.0.0.1:3000/users",
+                        "query_params": []
+                    },
+                    "method": "POST",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json",
+                            "type": "text",
+                            "disable": false
+                        }
+                    ],
+                    "config": {
+                        "ORIGIN": "",
+                        "USERAGENT": "",
+                        "TIMEOUT_MS": 0,
+                        "REJECT_UNAUTHORIZED": false,
+                        "FOLLOWLOCATION": true,
+                        "MAXREDIRS": -1,
+                        "HTTP_VERSION": "V2Tls"
+                    },
+                    "scripts": {
+                        "pre": "",
+                        "post": "",
+                        "test": ""
+                    },
+                    "bodies": [
+                        {
+                            "name": "Default",
+                            "meta": {
+                                "active_body_type": "application/json",
+                                "is_default": true
+                            },
+                            "body": {
+                                "application/json": {
+                                    "value": "{\r\n    \"phone\":\"06300300300\",\r\n    \"password\":\"123123123\"\r\n}",
+                                    "headers": []
+                                }
+                            }
                         }
                     ]
                 }
@@ -2362,7 +2424,7 @@
                         "slashes": true,
                         "protocol": "http:",
                         "hash": "",
-                        "pathname": "/api/products/4",
+                        "pathname": "/api/products/2",
                         "auth": "",
                         "host": "127.0.0.1:3000",
                         "port": "3000",
@@ -2370,7 +2432,7 @@
                         "password": "",
                         "username": "",
                         "origin": "http://127.0.0.1:3000",
-                        "href": "http://127.0.0.1:3000/api/products/4",
+                        "href": "http://127.0.0.1:3000/api/products/2",
                         "query_params": []
                     },
                     "method": "GET",
@@ -2521,6 +2583,299 @@
                                 "is_default": true
                             },
                             "body": {}
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Chat",
+            "description": "",
+            "requests": [
+                {
+                    "meta": {
+                        "name": "Basic",
+                        "description": "",
+                        "type": "socketio",
+                        "version": "2.0"
+                    },
+                    "_dnp": {},
+                    "url": {
+                        "slashes": true,
+                        "protocol": "http:",
+                        "hash": "",
+                        "pathname": "",
+                        "auth": "",
+                        "host": "127.0.0.1:3000",
+                        "port": "3000",
+                        "hostname": "127.0.0.1",
+                        "password": "",
+                        "username": "",
+                        "origin": "http://127.0.0.1:3000",
+                        "href": "http://127.0.0.1:3000",
+                        "query_params": []
+                    },
+                    "config": {
+                        "version": "v4",
+                        "rejectUnauthorized": false,
+                        "timeout": 20000,
+                        "reconnection": false,
+                        "reconnectionAttempts": 3,
+                        "reconnectionDelay": 1000,
+                        "reconnectionDelayMax": 5000
+                    },
+                    "connections": [
+                        {
+                            "name": "Default",
+                            "forceNew": false,
+                            "namespace": "/chat",
+                            "path": "",
+                            "ping": false,
+                            "ping_interval": 3000,
+                            "transports": {
+                                "websocket": true,
+                                "polling": true
+                            },
+                            "headers": [],
+                            "query_params": [],
+                            "auth": [],
+                            "is_default": true
+                        }
+                    ],
+                    "listeners": [
+                        "s-greet"
+                    ],
+                    "emitter_collection": []
+                },
+                {
+                    "meta": {
+                        "name": "Server",
+                        "description": "",
+                        "type": "socketio",
+                        "version": "2.0"
+                    },
+                    "_dnp": {},
+                    "url": {
+                        "slashes": true,
+                        "protocol": "http:",
+                        "hash": "",
+                        "pathname": "",
+                        "auth": "",
+                        "host": "127.0.0.1:3000",
+                        "port": "3000",
+                        "hostname": "127.0.0.1",
+                        "password": "",
+                        "username": "",
+                        "origin": "http://127.0.0.1:3000",
+                        "href": "http://127.0.0.1:3000",
+                        "query_params": []
+                    },
+                    "config": {
+                        "version": "v4",
+                        "rejectUnauthorized": false,
+                        "timeout": 20000,
+                        "reconnection": false,
+                        "reconnectionAttempts": 3,
+                        "reconnectionDelay": 1000,
+                        "reconnectionDelayMax": 5000
+                    },
+                    "connections": [
+                        {
+                            "name": "Default",
+                            "forceNew": false,
+                            "namespace": "/chat",
+                            "path": "",
+                            "ping": false,
+                            "ping_interval": 3000,
+                            "transports": {
+                                "websocket": true,
+                                "polling": true
+                            },
+                            "headers": [],
+                            "query_params": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMTkxMWQ1MGZlNDhiMjNlYzc1NjY4NCIsIm5hbWUiOiJTdSBTdSIsImVtYWlsIjoic3VzdUBnbWFpbC5jb20iLCJwaG9uZSI6IjA5MzAwMzAwMzAwIiwidG9rZW4iOiIiLCJpYXQiOjE2MzA3NjI1Njd9.HCQEInvryKz3HY6w1HAPbfCDw7lDwhY1lk4NGZq9nFg",
+                                    "disable": false,
+                                    "type": "text"
+                                }
+                            ],
+                            "auth": [],
+                            "is_default": true
+                        }
+                    ],
+                    "listeners": [
+                        "unread",
+                        "message",
+                        "messages"
+                    ],
+                    "emitter_collection": [
+                        {
+                            "name": "unread",
+                            "body": [
+                                {
+                                    "payload": "",
+                                    "meta": {
+                                        "type": "text",
+                                        "envelope": ""
+                                    }
+                                }
+                            ],
+                            "meta": {
+                                "label": "Unread",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "message",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\r\n  \"from\":\"611911d50fe48b23ec756684\",\r\n  \"to\":\"612a433a156ba54024ac9251\",\r\n  \"type\":\"text\",\r\n  \"msg\":\"From Server Msg 1\"\r\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "Message",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "load-more",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\r\n\"page\":0\r\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "Load-More",
+                                "interval": "",
+                                "ack": false
+                            }
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "name": "Client",
+                        "description": "",
+                        "type": "socketio",
+                        "version": "2.0"
+                    },
+                    "_dnp": {},
+                    "url": {
+                        "slashes": true,
+                        "protocol": "http:",
+                        "hash": "",
+                        "pathname": "",
+                        "auth": "",
+                        "host": "127.0.0.1:3000",
+                        "port": "3000",
+                        "hostname": "127.0.0.1",
+                        "password": "",
+                        "username": "",
+                        "origin": "http://127.0.0.1:3000",
+                        "href": "http://127.0.0.1:3000",
+                        "query_params": []
+                    },
+                    "config": {
+                        "version": "v4",
+                        "rejectUnauthorized": false,
+                        "timeout": 20000,
+                        "reconnection": false,
+                        "reconnectionAttempts": 3,
+                        "reconnectionDelay": 1000,
+                        "reconnectionDelayMax": 5000
+                    },
+                    "connections": [
+                        {
+                            "name": "Default",
+                            "forceNew": false,
+                            "namespace": "/chat",
+                            "path": "",
+                            "ping": false,
+                            "ping_interval": 3000,
+                            "transports": {
+                                "websocket": true,
+                                "polling": true
+                            },
+                            "headers": [],
+                            "query_params": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmE0MzNhMTU2YmE1NDAyNGFjOTI1MSIsIm5hbWUiOiJVc2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwicGhvbmUiOiIwNjMwMDMwMDMwMCIsInRva2VuIjoiIiwiaWF0IjoxNjMwNzYyODAwfQ.mWVebtoC-Mhtkd6osQmS9ZSzzwksnqilWOixwz9XFqQ",
+                                    "disable": false,
+                                    "type": "text"
+                                }
+                            ],
+                            "auth": [],
+                            "is_default": true
+                        }
+                    ],
+                    "listeners": [
+                        "message",
+                        "unread",
+                        "messages"
+                    ],
+                    "emitter_collection": [
+                        {
+                            "name": "message",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\r\n  \"from\":\"612a433a156ba54024ac9251\",\r\n  \"to\":\"611911d50fe48b23ec756684\",\r\n  \"type\":\"vido\",\r\n  \"msg\":\"http://192/uploads/video.mp4\"\r\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "Message",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "unread",
+                            "body": [
+                                {
+                                    "payload": "",
+                                    "meta": {
+                                        "type": "text",
+                                        "envelope": ""
+                                    }
+                                }
+                            ],
+                            "meta": {
+                                "label": "Unreads",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "load-more",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\r\n\"page\":0\r\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "load-more",
+                                "interval": "",
+                                "ack": false
+                            }
                         }
                     ]
                 }
