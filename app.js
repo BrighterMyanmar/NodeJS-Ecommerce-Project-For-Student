@@ -6,6 +6,7 @@ const express = require('express'),
    io = new Server(server, {
       origin: "*"
    }),
+   path = require('path'),
    bodyParser = require('body-parser'),
    mongoose = require('mongoose'),
    helper = require('./utils/helper'),
@@ -16,7 +17,7 @@ mongoose.connect(`mongodb://localhost:27017/${process.env.DB_NAME}`, {
    useUnifiedTopology: true,
    useFindAndModify: false
 });
-
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 app.use(bodyParser.json());
 app.use(fileUpload());
 
@@ -29,7 +30,6 @@ const childcatRouter = require('./routes/childcat');
 const productRouter = require('./routes/products');
 const orderRouter = require('./routes/order');
 const apiRouter = require('./routes/api');
-
 
 app.use('/users', userRouter);
 app.use('/roles', roleRouter);
@@ -45,7 +45,6 @@ app.use((err, req, res, next) => {
    err.status = err.status || 303;
    res.status(err.status).json({ con: false, "msg": err.message });
 })
-
 
 io.of("/chat").use(async (socket, next) => {
    let user = await helper.getTokenFromSocket(socket);
